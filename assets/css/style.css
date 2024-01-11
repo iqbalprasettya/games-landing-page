@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-
+:root {
+  --font-primary: Arial, Helvetica, sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
+}
 * {
   margin: 0;
   padding: 0;
@@ -30,15 +33,17 @@ h3 {
 .text-center {
   text-align: center;
 }
+
 .btn-primary {
   color: #000;
   background-image: linear-gradient(
     rgba(255, 181, 72, 1),
     rgba(243, 176, 52, 1)
   );
-  padding: 20px 85px;
+  padding: 20px 75px;
   font-weight: 700;
   border-radius: 8px;
+  margin-top: 500px;
 }
 .container {
   max-width: 1240px;
@@ -47,9 +52,13 @@ h3 {
   margin-left: auto;
   margin-right: auto;
 }
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 header {
   background-color: rgba(0, 0, 0, 0.5);
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-secondary);
   font-weight: 700;
   align-items: center;
 }
@@ -91,8 +100,14 @@ nav ul,
 .flex {
   display: flex;
 }
-.flex-col {
+.flex-row {
   flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
 }
 .gap-20 {
   gap: 15px;
@@ -145,8 +160,7 @@ nav ul,
 .background-image4 {
   width: 100%;
   height: 960px;
-  background-image: 
-    radial-gradient(
+  background-image: radial-gradient(
       circle at 100%,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.3) 50%,
@@ -156,9 +170,16 @@ nav ul,
   background-repeat: no-repeat;
   background-size: cover;
 }
+.background-image5 {
+  width: 100%;
+  height: 960px;
+  background-image: url("../img/bg-image5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .hero-text {
   margin-top: 200px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
 }
 .hero-text h1 {
   color: #fff;
@@ -175,7 +196,7 @@ nav ul,
   color: #fff;
   text-align: center;
   width: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-secondary);
   font-weight: 700;
   text-transform: uppercase;
   position: absolute;
@@ -187,7 +208,7 @@ nav ul,
 }
 .about-text {
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
 }
 .about-text h1 {
   font-size: 56px;
@@ -240,13 +261,10 @@ nav ul,
 .about-gallery .dots span.active {
   background-color: #fff;
 }
-.feature {
-  height: 100vh;
-}
 .feature-text {
   width: 520px;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
   right: 2%;
   top: 30%;
 }
@@ -314,4 +332,76 @@ nav ul,
   text-align: center;
   border: 2px solid #fff;
   background-color: #fff;
+}
+.requirement {
+  color: #fff;
+}
+.requirement h1 {
+  margin-bottom: 40px;
+}
+.requirement .req-text {
+  padding-top: 210px;
+}
+.requirement .req-text .req-header {
+  font-family: var(--font-primary);
+  margin-bottom: 70px;
+}
+.requirement .req-text .req-body h1 {
+  text-transform: uppercase;
+  font-size: 56px;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  width: 600px;
+}
+.requirement table,
+td {
+  padding: 15px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.requirement table {
+  border-collapse: collapse;
+  width: 560px;
+}
+.requirement table,
+td h3 {
+  color: #ffb548;
+  font-family: var(--font-primary);
+}
+.requirement table,
+td p {
+  color: #fff;
+}
+
+.quote {
+  color: #fff;
+  font-family: var(--font-primary);
+}
+.quote .quote-body {
+}
+/* .quote .btn-primary {
+  margin-top: 90px;
+}
+.quote .quote-body .quote-item h1 {
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.quote .quote-body .quote-item p {
+  width: 380px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--font-secondary);
+  margin-bottom: 80px;
+} */
+@media only screen and (max-width: 768px) {
+  .about-gallery {
+    margin-top: 40px;
+    width: 500px;
+  }
+  .about-gallery img {
+    margin-top: 40px;
+    width: 480px;
+  }
+
 }
